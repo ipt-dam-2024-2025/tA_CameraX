@@ -7,13 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <!-- objeto para receber a imagem lida pela câmara -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- botão que irá 'tirar' a fotografia -->
+    <Button
+        android:id="@+id/image_capture_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:elevation="2dp"
+        android:text="@string/texto_bt"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/guide_line"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <!-- este objeto irá criar uma 'linha' invísivel vertical,
+         a dividir o ecrã em 'dois' -->
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guide_line"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent=".50"    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
