@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Camera X</string>
     <string name="texto_bt">Tirar fotografia</string>
+    <string name="texto_permissao">Permissões negadas</string>
 </resources>
